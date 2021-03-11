@@ -64,11 +64,11 @@ class Parent(Individual):
         zygotes=[]
         for allele in self.genotype.alleles:
             for another_allele in another_parent.genotype.alleles:
-                zygote_genotype = Genotype(loci=self.genotype.loci, 
-                    first_allele=Allele(allele_type=allele.type, 
-                        from_parent=self.sex), 
-                    second_allele=Allele(allele_type=another_allele.type, 
-                        from_parent=another_parent.sex))
+                zygote_genotype = Genotype(loci=self.genotype.loci,
+                                  first_allele=Allele(allele_type=allele.type,
+                                                      from_parent=self.sex),
+                                  second_allele=Allele(allele_type=another_allele.type,
+                                                       from_parent=another_parent.sex))
                 zygotes.append(zygote_genotype)
         return zygotes
 

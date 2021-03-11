@@ -80,9 +80,9 @@ class PaternityTest():
                         typies = list(SLAFM[loci].keys())
                         step = abs(typies.index(original) - typies.index(mutated))
                         mutation_hypothesis = {
-                            'step': step, 
-                            'from': from_parent, 
-                            'original': original, 
+                            'step': step,
+                            'from': from_parent,
+                            'original': original,
                             'mutated': mutated
                         }
                         hypotheses.append(mutation_hypothesis)

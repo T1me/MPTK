@@ -16,6 +16,6 @@ y = test.GetY()
 pi = test.getPaternityIndex(x, y)
 print('Mutation Hypotheses:')
 for h in hypotheses: print('\t' + str(h))
-print('X = ' + str(x))
-print('Y = ' + str(y))
-print('PI = ' + str(pi))
+print('X = ' + str(x)) # X = 0.0006428621428571428705251137554
+print('Y = ' + str(y)) # Y = 0.03498608000000000204472883070
+print('PI = ' + str(pi)) # PI = 0.01837479771546691807009059341
