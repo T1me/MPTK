@@ -31,17 +31,19 @@ class PaternityTest():
     # Whether that consistent with the law of gene segregation
     @staticmethod
     def ifSeparation(intersections):
-        if len(intersections) == 2:
-            return True
+        for i in intersections:
+            if len(i) == 2:
+                return True
         else:
             return False
 
     @staticmethod
     def ifNonParentage(intersections):
-        if len(intersections) == 0:
-            return True
+        for i in intersections:
+            if len(i) != 0:
+                return False
         else:
-            return False
+            return True
 
     @staticmethod
     def getProbability(hypothesis):

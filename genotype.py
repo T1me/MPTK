@@ -12,7 +12,7 @@ with open('frequency.yml', 'r') as f:
 
 
 class Allele():
-    def __init__(self, allele_type: int, from_parent=None):
+    def __init__(self, allele_type, from_parent=None):
         self.type = allele_type
         self.from_parent = from_parent
 
@@ -22,8 +22,8 @@ class Genotype():
 
     Args:
         loci (str): Which STR loci that current genotype belong to.
-        first_allele (int): The first allele of this genotype as number.
-        second_allele (int): The second allele of this genotype as number.
+        first_allele: The first allele of this genotype as number.
+        second_allele: The second allele of this genotype as number.
 
     Attributes:
         loci: The STR loci that current genotype belong to.
