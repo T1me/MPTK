@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import click
-from genotype import Allele, Genotype
+
 from genotype import STR_LOCUS_ALLELE_FREQUENCY_MAP as SLAFM
-from individual import Parent, Child
+from genotype import Allele, Genotype
+from individual import Child, Parent
 from paternitytest import PaternityTest
 
 

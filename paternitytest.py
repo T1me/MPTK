@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from colorama import init as coloramaInit
-from colorama import Fore, Style
 from decimal import Decimal as dec
+
+from colorama import Fore, Style
+from colorama import init as coloramaInit
+
 from genotype import STR_LOCUS_ALLELE_FREQUENCY_MAP as SLAFM
-from individual import Parent, Child
+from individual import Child, Parent
 
 coloramaInit()
 RSLMR = RATE_OF_STR_LOCUS_MUTATION = 0.002
