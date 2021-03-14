@@ -20,6 +20,8 @@ class WxFrame ( wx.Frame ):
 		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"MPTK", pos = wx.DefaultPosition, size = wx.Size( 550,650 ), style = wx.CAPTION|wx.CLOSE_BOX|wx.FRAME_SHAPED|wx.SYSTEM_MENU|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
+		self.SetForegroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
+		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOW ) )
 
 		main = wx.BoxSizer( wx.VERTICAL )
 
