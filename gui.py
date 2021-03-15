@@ -73,7 +73,7 @@ class MPTK(WxFrame):
         zygote_typies = list(map(lambda z: z.type, zygotes))
         child_type = ch.genotype.type
         intersections = list(map(lambda zt: set(child_type) & set(zt), zygote_typies))
-        if PaternityTest.ifSeparation(intersections):
+        if PaternityTest.ifSeparation(zygote_typies, child_type):
             result_text = 'Genotypes consistent with the law of gene segregation.'
             return result_text
         if PaternityTest.ifNonParentage(intersections):
