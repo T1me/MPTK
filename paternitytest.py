@@ -28,9 +28,9 @@ class PaternityTest():
 
     # Whether that consistent with the law of gene segregation
     @staticmethod
-    def ifSeparation(intersections):
-        for i in intersections:
-            if len(i) == 2:
+    def ifSeparation(zygote_type, child_type):
+        for zt in zygote_type:
+            if set(zt) == set(child_type):
                 return True
         else:
             return False
@@ -57,7 +57,7 @@ class PaternityTest():
         zygote_type = list(map(lambda z: z.type, zygotes))
         child_type = self.child.genotype.type
         intersections = list(map(lambda zt: set(child_type) & set(zt), zygote_type))
-        if PaternityTest.ifSeparation(intersections):
+        if PaternityTest.ifSeparation(zygote_type, child_type):
             print(Fore.YELLOW + 'Genotypes consistent with the law of gene segregation' + Style.RESET_ALL)
             exit(1)
         if PaternityTest.ifNonParentage(intersections):
